@@ -99,28 +99,40 @@ class _LoginPageState extends State<LoginPage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                  Container(
-                    width: 60,
-                    height: 60,
-                    padding: EdgeInsets.all(10.0),
-                    decoration: BoxDecoration(
-                      color: Colors.grey.shade200,
-                      border: Border.all(color: Colors.white),
-                      borderRadius: BorderRadius.circular(10.0)
-                    ),
-                    child: SvgPicture.asset('assets/google.svg'),
+                  IconButton(
+                  onPressed: (){
+
+                  },
+                  icon: 
+                    Container(
+                      width: 65,
+                      height: 65,
+                      padding: EdgeInsets.all(12.0),
+                      decoration: BoxDecoration(
+                        color: Colors.grey.shade200,
+                        border: Border.all(color: Colors.white),
+                        borderRadius: BorderRadius.circular(10.0)
+                      ),
+                      child: SvgPicture.asset('assets/google.svg'),
+                    )
                   ),
-                  SizedBox(width: 20,),
-                   Container(
-                    width: 60,
-                    height: 60,
-                    padding: EdgeInsets.all(10.0),
-                    decoration: BoxDecoration(
-                      color: Colors.grey.shade200,
-                      border: Border.all(color: Colors.white),
-                      borderRadius: BorderRadius.circular(10.0)
-                    ),
-                    child: SvgPicture.asset('assets/bi_apple.svg'),
+                  SizedBox(width: 10,),
+                  IconButton(
+                  onPressed: (){
+
+                  },
+                  icon: 
+                    Container(
+                      width: 65,
+                      height: 65,
+                      padding: EdgeInsets.all(12.0),
+                      decoration: BoxDecoration(
+                        color: Colors.grey.shade200,
+                        border: Border.all(color: Colors.white),
+                        borderRadius: BorderRadius.circular(10.0)
+                      ),
+                      child: SvgPicture.asset('assets/bi_apple.svg'),
+                    )
                   ),
                 ]),
               ),
