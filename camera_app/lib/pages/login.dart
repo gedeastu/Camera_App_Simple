@@ -22,11 +22,16 @@ class _LoginPageState extends State<LoginPage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              SizedBox(height: 50.0,),
+              SizedBox(height: 45.0,),
 
               //Logo
               SizedBox(
-                child: Icon(Icons.lock,size: 100,),
+                child: Column(
+                  children: [
+                    Icon(Icons.recycling_sharp,size: 100,),
+                    Text("Microthings",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18.0),)
+                  ],
+                ),
               ),
 
               SizedBox(height: 50,),
