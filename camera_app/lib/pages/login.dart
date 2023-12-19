@@ -1,8 +1,12 @@
 import 'package:camera_app/components/email.dart';
+import 'package:camera_app/components/password.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 class LoginPage extends StatefulWidget {
-  const LoginPage({super.key});
+  LoginPage({super.key});
+
+  final  emailController = TextEditingController();
+  final  passwordController = TextEditingController();
 
   @override
   State<LoginPage> createState() => _LoginPageState();
@@ -11,8 +15,8 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      backgroundColor: Color.fromARGB(255, 220, 219, 219),
+    return Scaffold(
+      backgroundColor: Colors.grey.shade300,
       body: SafeArea(
         child: Center(
           child: Column(
@@ -32,8 +36,27 @@ class _LoginPageState extends State<LoginPage> {
               SizedBox(
                 height: 25.0,
               ),
-              Email(),
-              
+              Email(
+                hintText: "example@gmail.com",
+                obscureText: false,
+                controller: widget.emailController,
+              ),
+              SizedBox(
+                height: 15.0,
+              ),
+              Password(controller: widget.passwordController, hintText: "********",),
+              SizedBox(
+                height: 15.0,
+              ),
+              Container(
+                margin: EdgeInsets.symmetric(horizontal: 27.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Text("Forgot Password",style: TextStyle(color: Colors.grey.shade700),)
+                  ],
+                ),
+              )
             ],
           ),
         ),
