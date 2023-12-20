@@ -1,5 +1,6 @@
 import 'package:camera_app/components/email.dart';
 import 'package:camera_app/components/password.dart';
+import 'package:camera_app/pages/register.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 class LoginPage extends StatefulWidget {
@@ -156,7 +157,11 @@ class _LoginPageState extends State<LoginPage> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   const Text("Not a Member?"),
-                  TextButton(onPressed: (){},style:  ButtonStyle(overlayColor: MaterialStateProperty.all(Colors.transparent)), child: const Text("Register Now",style: TextStyle(color: Colors.blue,fontWeight: FontWeight.bold),),)
+                  TextButton(onPressed: (){
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+                      return RegisterPage();
+                    },));
+                  },style:  ButtonStyle(overlayColor: MaterialStateProperty.all(Colors.transparent)), child: const Text("Register Now",style: TextStyle(color: Colors.blue,fontWeight: FontWeight.bold),),)
                 ],
               ),
               )
