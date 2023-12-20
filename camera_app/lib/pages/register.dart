@@ -36,11 +36,16 @@ class _RegisterPageState extends State<RegisterPage> {
                 ),
               ),
             ),
-            SizedBox(height: 35.0,),
-            Container(
-              child: Icon(Icons.app_registration,size: 100,),
-            ),
-            SizedBox(height: 35,),
+            SizedBox(height: 20.0,),
+            const SizedBox(
+                child: Column(
+                  children: [
+                    Icon(Icons.app_registration,size: 100,),
+                    Text("Register",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18.0),)
+                  ],
+                ),
+              ),
+            SizedBox(height: 20,),
             Text("Hello & Welcome to your destination",style: TextStyle(
               fontSize: 17.0,color: Color.fromARGB(255, 117, 117, 117)
             ),),

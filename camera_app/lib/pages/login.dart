@@ -31,7 +31,7 @@ class _LoginPageState extends State<LoginPage> {
                 child: Column(
                   children: [
                     Icon(Icons.recycling_sharp,size: 100,),
-                    Text("Microthings",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18.0),)
+                    Text("Login",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18.0),)
                   ],
                 ),
               ),
