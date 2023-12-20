@@ -2,7 +2,7 @@ import 'package:camera_app/pages/login.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(App());
+  runApp(const App());
 }
 class App extends StatefulWidget {
   const App({super.key});

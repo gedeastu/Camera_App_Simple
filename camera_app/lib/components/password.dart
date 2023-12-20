@@ -31,7 +31,7 @@ class _PasswordState extends State<Password> {
                   obscureText: _obscureText,
                   controller: widget.controller,
                   decoration: InputDecoration(
-                    suffixIcon: IconButton(icon: _obscureText ? Icon(Icons.visibility_outlined) : Icon(Icons.visibility_off_outlined),onPressed: () {
+                    suffixIcon: IconButton(icon: _obscureText ? const Icon(Icons.visibility_outlined) : const Icon(Icons.visibility_off_outlined),onPressed: () {
                       setState(() {
                         _obscureText = !_obscureText;
                       });
@@ -40,8 +40,8 @@ class _PasswordState extends State<Password> {
                     hintStyle: TextStyle(color: Colors.grey.shade500),
                     filled: true,
                     fillColor: Colors.grey.shade200,
-                    border: OutlineInputBorder(),
-                    enabledBorder: OutlineInputBorder(
+                    border: const OutlineInputBorder(),
+                    enabledBorder: const OutlineInputBorder(
                       borderSide: BorderSide(color: Colors.white)
                     ),
                     focusedBorder: OutlineInputBorder(

@@ -13,6 +13,7 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+  bool? _rememberMe = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,10 +23,10 @@ class _LoginPageState extends State<LoginPage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              SizedBox(height: 45.0,),
+              const SizedBox(height: 45.0,),
 
               //Logo
-              SizedBox(
+              const SizedBox(
                 child: Column(
                   children: [
                     Icon(Icons.recycling_sharp,size: 100,),
@@ -34,15 +35,15 @@ class _LoginPageState extends State<LoginPage> {
                 ),
               ),
 
-              SizedBox(height: 50,),
+              const SizedBox(height: 50,),
 
               //Welcome back you've been missed!
-              Text(
+              const Text(
                 "Welcome back you've been missed!",
                 style: TextStyle(fontSize: 17.0,color: Color.fromARGB(255, 117, 117, 117)),
               ),
               
-              SizedBox(
+              const SizedBox(
                 height: 25.0,
               ),
 
@@ -53,28 +54,33 @@ class _LoginPageState extends State<LoginPage> {
                 controller: widget.emailController,
               ),
 
-              SizedBox(
+              const SizedBox(
                 height: 15.0,
               ),
 
               //Password
               Password(controller: widget.passwordController, hintText: "********",),
-              SizedBox(
+              const SizedBox(
                 height: 15.0,
               ),
 
               //Forgot Password
               Container(
-                margin: EdgeInsets.symmetric(horizontal: 27.0),
+                margin: const EdgeInsets.symmetric(horizontal: 26.0),
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
+                    Checkbox(value: _rememberMe, onChanged: (value) {
+                      setState(() {
+                        _rememberMe = value;
+                      });
+                    },activeColor: Colors.black,),
                     Text("Forgot Password",style: TextStyle(color: Colors.grey.shade700),)
                   ],
                 ),
               ),
 
-              SizedBox(
+              const SizedBox(
                 height: 20.0,
               ),
 
@@ -84,19 +90,19 @@ class _LoginPageState extends State<LoginPage> {
                 height: 60,
                 decoration: BoxDecoration(color: Colors.black,borderRadius: BorderRadius.circular(8.0)),
                 child: TextButton(
-                  child: Text("Sign In",style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 15.0),),
+                  child: const Text("Sign In",style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 15.0),),
                   onPressed: (){
 
                   },
                 ),
               ),
 
-              SizedBox(height: 60.0,),
+              const SizedBox(height: 50.0,),
 
               Text('or continue with',style: TextStyle(color: Colors.grey.shade700),),
 
-              SizedBox(
-                height: 60.0,
+              const SizedBox(
+                height: 50.0,
               ),
 
               Container(
@@ -112,7 +118,7 @@ class _LoginPageState extends State<LoginPage> {
                     Container(
                       width: 65,
                       height: 65,
-                      padding: EdgeInsets.all(12.0),
+                      padding: const EdgeInsets.all(12.0),
                       decoration: BoxDecoration(
                         color: Colors.grey.shade200,
                         border: Border.all(color: Colors.white),
@@ -121,7 +127,7 @@ class _LoginPageState extends State<LoginPage> {
                       child: SvgPicture.asset('assets/google.svg'),
                     )
                   ),
-                  SizedBox(width: 10,),
+                  const SizedBox(width: 10,),
                   IconButton(
                   onPressed: (){
 
@@ -130,7 +136,7 @@ class _LoginPageState extends State<LoginPage> {
                     Container(
                       width: 65,
                       height: 65,
-                      padding: EdgeInsets.all(12.0),
+                      padding: const EdgeInsets.all(12.0),
                       decoration: BoxDecoration(
                         color: Colors.grey.shade200,
                         border: Border.all(color: Colors.white),
@@ -142,15 +148,17 @@ class _LoginPageState extends State<LoginPage> {
                 ]),
               ),
 
-              SizedBox(height: 60.0,),
+              const SizedBox(height: 30.0,),
 
-              RichText(
-                text: TextSpan(
-                style: TextStyle(color: Colors.grey.shade700),
-                children:<TextSpan>[
-                  TextSpan(text: "Not a member? "),
-                  TextSpan(text: "Register now",style: TextStyle(color: Colors.blue,fontWeight: FontWeight.bold))
-                ]),
+              Container(
+                child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  const Text("Not a Member?"),
+                  TextButton(onPressed: (){},style:  ButtonStyle(overlayColor: MaterialStateProperty.all(Colors.transparent)), child: const Text("Register Now",style: TextStyle(color: Colors.blue,fontWeight: FontWeight.bold),),)
+                ],
+              ),
               )
             ],
           ),
