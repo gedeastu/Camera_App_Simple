@@ -11,11 +11,15 @@ class _RegisterPageState extends State<RegisterPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        leading: Row(
+          children: [],
+        ),
+      ),
+      backgroundColor: Colors.grey.shade300,
       body: SafeArea(
         child: Container(
-          child: TextButton(onPressed: () {
-            Navigator.of(context).pop();
-          }, child: Text("Back to Login")),
+          child: 
         ),
       ),
     );
