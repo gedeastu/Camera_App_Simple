@@ -23,7 +23,7 @@ class _RegisterPageState extends State<RegisterPage> {
 
             //Back to login
             Container(
-              margin: EdgeInsets.only(left: 20.0,top: 25.0),
+              margin: const EdgeInsets.only(left: 20.0,top: 25.0),
               child: GestureDetector(
                 onTap: () {
                   Navigator.of(context).pop();
@@ -36,7 +36,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 ),
               ),
             ),
-            SizedBox(height: 20.0,),
+            const SizedBox(height: 20.0,),
             const SizedBox(
                 child: Column(
                   children: [
@@ -45,19 +45,19 @@ class _RegisterPageState extends State<RegisterPage> {
                   ],
                 ),
               ),
-            SizedBox(height: 20,),
-            Text("Hello & Welcome to your destination",style: TextStyle(
+            const SizedBox(height: 20,),
+            const Text("Hello & Welcome to your destination",style: TextStyle(
               fontSize: 17.0,color: Color.fromARGB(255, 117, 117, 117)
             ),),
-            SizedBox(height: 20,),
+            const SizedBox(height: 20,),
             Email(controller: widget.emailController, hintText: "Full Name", obscureText: false),
-            SizedBox(height: 15,),
+            const SizedBox(height: 15,),
             Email(controller: widget.emailController, hintText: "Example@gmamil.com", obscureText: false),
-            SizedBox(height: 15,),
+            const SizedBox(height: 15,),
             Password(controller: widget.passwordController, hintText: "********"),
-            SizedBox(height: 15,),
+            const SizedBox(height: 15,),
             Password(controller: widget.passwordController, hintText: "Confirm Password"),
-            SizedBox(height: 15,),
+            const SizedBox(height: 15,),
             Container(
                 width: 380,
                 height: 60,
@@ -69,9 +69,9 @@ class _RegisterPageState extends State<RegisterPage> {
                   },
                 ),
             ),
-            SizedBox(height: 20,),
+            const SizedBox(height: 20,),
             Text('or sign up with',style: TextStyle(color: Colors.grey.shade700),),
-            SizedBox(height: 15,),
+            const SizedBox(height: 15,),
             Container(
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -114,7 +114,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   ),
                 ]),
               ),
-              SizedBox(height: 15,),
+              const SizedBox(height: 15,),
               Container(
                 child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,

@@ -1,5 +1,6 @@
 import 'package:camera_app/components/email.dart';
 import 'package:camera_app/components/password.dart';
+import 'package:camera_app/pages/home.dart';
 import 'package:camera_app/pages/register.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -93,7 +94,9 @@ class _LoginPageState extends State<LoginPage> {
                 child: TextButton(
                   child: const Text("Sign In",style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 15.0),),
                   onPressed: (){
-
+                     Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) {
+                      return const Home();
+                    },));
                   },
                 ),
               ),
