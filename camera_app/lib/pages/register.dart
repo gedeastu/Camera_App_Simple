@@ -1,5 +1,6 @@
 import 'package:camera_app/components/email.dart';
 import 'package:camera_app/components/password.dart';
+import 'package:camera_app/pages/home.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 class RegisterPage extends StatefulWidget {
@@ -65,7 +66,9 @@ class _RegisterPageState extends State<RegisterPage> {
                 child: TextButton(
                   child: const Text("Sign Up",style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 15.0),),
                   onPressed: (){
-
+                    Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) {
+                        return Home();
+                    },));
                   },
                 ),
             ),
