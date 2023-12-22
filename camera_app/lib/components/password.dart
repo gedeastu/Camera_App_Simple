@@ -4,11 +4,13 @@ import 'package:flutter/material.dart';
 class Password extends StatefulWidget {
   final controller;
   final String hintText;
+  final double width;
 
   Password({
     super.key,
     required this.controller,
     required this.hintText,
+    required this.width
     //required this._obscureText
   });
 
@@ -21,7 +23,7 @@ class _PasswordState extends State<Password> {
   @override
   Widget build(BuildContext context) {
     return Container(
-                width: 380,
+                width: widget.width,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20.0)
                 ),

@@ -51,13 +51,13 @@ class _RegisterPageState extends State<RegisterPage> {
               fontSize: 17.0,color: Color.fromARGB(255, 117, 117, 117)
             ),),
             const SizedBox(height: 20,),
-            Email(controller: widget.emailController, hintText: "Full Name", obscureText: false),
+            Email(controller: widget.emailController, hintText: "Full Name", obscureText: false, width: 350,),
             const SizedBox(height: 15,),
-            Email(controller: widget.emailController, hintText: "Example@gmamil.com", obscureText: false),
+            Email(controller: widget.emailController, hintText: "Example@gmamil.com", obscureText: false, width: 350,),
             const SizedBox(height: 15,),
-            Password(controller: widget.passwordController, hintText: "********"),
+            Password(controller: widget.passwordController, hintText: "********",width: 350,),
             const SizedBox(height: 15,),
-            Password(controller: widget.passwordController, hintText: "Confirm Password"),
+            Password(controller: widget.passwordController, hintText: "Confirm Password",width: 350,),
             const SizedBox(height: 15,),
             Container(
                 width: 380,

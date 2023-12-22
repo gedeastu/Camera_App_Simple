@@ -4,12 +4,14 @@ class Email extends StatefulWidget {
   final controller;
   final String hintText;
   final bool obscureText;
+  final double width;
 
   const Email({
     super.key,
     required this.controller,
     required this.hintText,
-    required this.obscureText
+    required this.obscureText,
+    required this.width
   });
 
   @override
@@ -19,8 +21,9 @@ class Email extends StatefulWidget {
 class _EmailState extends State<Email> {
   @override
   Widget build(BuildContext context) {
+    // final currentWidth = MediaQuery.of(context).size.width;
     return Container(
-                width: 380,
+                width: widget.width,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20.0)
                 ),

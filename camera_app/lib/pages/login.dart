@@ -54,6 +54,7 @@ class _LoginPageState extends State<LoginPage> {
                 hintText: "example@gmail.com",
                 obscureText: false,
                 controller: widget.emailController,
+                width: 350,
               ),
 
               const SizedBox(
@@ -61,7 +62,7 @@ class _LoginPageState extends State<LoginPage> {
               ),
 
               //Password
-              Password(controller: widget.passwordController, hintText: "********",),
+              Password(controller: widget.passwordController, hintText: "********",width: 350,),
               const SizedBox(
                 height: 15.0,
               ),

@@ -16,6 +16,7 @@ class _HomeState extends State<Home> {
   File ? _selectedImage;
   @override
   Widget build(BuildContext context) {
+    //final currentWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
         leading: GestureDetector(
